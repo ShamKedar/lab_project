@@ -11,4 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 5. Tell Docker what command to run automatically when the container starts up
-CMD ["python", "hello.py"]
+# CMD ["python", "hello.py"]
+
+# 5. Change CMD to run pytest instead of hello.py directly
+CMD ["pytest", "-v"]
